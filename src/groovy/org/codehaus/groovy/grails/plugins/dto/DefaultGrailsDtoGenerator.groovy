@@ -112,7 +112,7 @@ class DefaultGrailsDtoGenerator {
         }
 
         processProperty.call(dc.identifier)
-        dc.persistentProperties.each(processProperty)
+        dc.properties.findAll({ it.name != dc.identifier.name }).each(processProperty)
 
         // Start with the package line.
         if (targetPkg) {

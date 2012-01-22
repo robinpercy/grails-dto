@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb8eaf1-9779-4492-bc0b-c007258843e9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.properties" afterPath="$PROJECT_DIR$/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dto-grailsPlugins.iml" afterPath="$PROJECT_DIR$/dto-grailsPlugins.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dto.iml" afterPath="$PROJECT_DIR$/dto.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dto.ipr" afterPath="$PROJECT_DIR$/dto.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dto.iws" afterPath="$PROJECT_DIR$/dto.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/org/codehaus/groovy/grails/plugins/dto/DefaultGrailsDtoGenerator.groovy" afterPath="$PROJECT_DIR$/src/groovy/org/codehaus/groovy/grails/plugins/dto/DefaultGrailsDtoGenerator.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/web-app/WEB-INF/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/WEB-INF/sitemesh.xml" afterPath="$PROJECT_DIR$/web-app/WEB-INF/sitemesh.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/WEB-INF/tld/c.tld" afterPath="$PROJECT_DIR$/web-app/WEB-INF/tld/c.tld" />
@@ -74,7 +73,7 @@
       <file leaf-file-name="DefaultGrailsDtoGenerator.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/groovy/org/codehaus/groovy/grails/plugins/dto/DefaultGrailsDtoGenerator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="31" selection-start="4371" selection-end="4391" vertical-scroll-proportion="0.025">
+            <state line="114" column="62" selection-start="4422" selection-end="4422" vertical-scroll-proportion="0.792517">
               <folding />
             </state>
           </provider>
@@ -289,7 +288,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="22" width="1920" height="1054" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -300,8 +299,8 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3301282" sideWeight="0.67058825" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3301282" sideWeight="0.67058825" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -407,7 +406,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/org/codehaus/groovy/grails/plugins/dto/DefaultGrailsDtoGenerator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="31" selection-start="4371" selection-end="4391" vertical-scroll-proportion="0.025">
+        <state line="114" column="62" selection-start="4422" selection-end="4422" vertical-scroll-proportion="0.792517">
           <folding />
         </state>
       </provider>
