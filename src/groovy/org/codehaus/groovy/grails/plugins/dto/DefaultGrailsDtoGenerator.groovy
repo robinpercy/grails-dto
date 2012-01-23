@@ -11,13 +11,13 @@ import org.codehaus.groovy.grails.commons.GrailsDomainClass
  * @author Peter Ledbrook
  */
 class DefaultGrailsDtoGenerator {
-    private final String eol
-    private final String indent
+    protected final String eol
+    protected final String indent
 
-    private processed
+    protected processed
 
     Map packageTransforms = [:]
-
+    
     /**
      * Creates a generator.
      * @param useNativeEol The generator creates files with native line
@@ -84,7 +84,7 @@ class DefaultGrailsDtoGenerator {
         }
     }
 
-    private Set generateNoRecurseInternal(GrailsDomainClass dc, Writer writer, String targetPkg) {
+    protected Set generateNoRecurseInternal(GrailsDomainClass dc, Writer writer, String targetPkg) {
         // Deal with the persistent properties.
         def imports = []
         def fields = []

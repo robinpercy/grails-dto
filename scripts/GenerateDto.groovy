@@ -74,12 +74,16 @@ target(default: "Generates DTO classes for one or more domain classes.") {
         if (failed) return 1
     }
 
-    def srcDir = new File("src/java")
-    if (!srcDir.exists()) srcDir.mkdirs()
+
 
     // The generator is a Spring bean, so we can get it from the
     // application context.
     def generator = grailsApp.mainContext.getBean("dtoGenerator")
+    def srcPath = grailsApp.config.dto.groovy ? "src/groovy" : "src/java"
+    def srcDir = new File(srcPath)
+
+    println "Using src dir: ${srcPath}"
+    if (!srcDir.exists()) srcDir.mkdirs()
 
     // If we have a target package, initialise the generator's package
     // transformations.
@@ -95,5 +99,5 @@ target(default: "Generates DTO classes for one or more domain classes.") {
         generator.generate(dc, srcDir, !argsMap["non-recursive"])
     }
 
-    event("StatusFinal", [ "Successfully created the DTOs under src/java" ])
+    event("StatusFinal", [ "Successfully created the DTOs under ${srcPath}" ])
 }
