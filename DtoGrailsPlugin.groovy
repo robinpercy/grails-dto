@@ -122,6 +122,10 @@ map domain class instances to DTO instances.
             def mapper = ctx.getBean("dozerMapper")
             return mapper.map(delegate, clazz)
         }
+
+        mc.static.fromDTO = { DTO dto ->
+            return mapDtoInstance(ctx, dto)
+        }
     }
 
     /**
@@ -140,5 +144,23 @@ map domain class instances to DTO instances.
         // Now convert the domain instance to a DTO.
         def mapper = ctx.getBean("dozerMapper")
         return mapper.map(obj, dtoClass)
+    }
+
+    /**
+     * Uses the Dozer mapper to map a DTO instance to its corresponding
+     * domain.
+     * @param ctx The Spring application context containing the Dozer
+     * mapper.
+     * @param obj The dto instance to map.
+     * @return The DTO corresponding to the given domain instance.
+     */
+    private mapDtoInstance(ctx, DTO dto) {
+        // Get the appropriate DTO class for this domain instance.
+        def domainClassName = dto.getClass().name[0..-4]
+        def domainClass = dto.getClass().classLoader.loadClass(domainClassName)
+
+        // Now convert the domain instance to a DTO.
+        def mapper = ctx.getBean("dozerMapper")
+        return mapper.map(dto, domainClass)
     }
 }

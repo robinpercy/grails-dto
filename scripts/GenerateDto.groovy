@@ -79,7 +79,8 @@ target(default: "Generates DTO classes for one or more domain classes.") {
     // The generator is a Spring bean, so we can get it from the
     // application context.
     def generator = grailsApp.mainContext.getBean("dtoGenerator")
-    def srcPath = grailsApp.config.dto.groovy ? "src/groovy" : "src/java"
+    def srcPath = grailsApp.config?.dto?.groovy ? "src/groovy" : "src/java"
+    generator.makeValidateable = grailsApp.config?.dto?.validateable
     def srcDir = new File(srcPath)
 
     println "Using src dir: ${srcPath}"

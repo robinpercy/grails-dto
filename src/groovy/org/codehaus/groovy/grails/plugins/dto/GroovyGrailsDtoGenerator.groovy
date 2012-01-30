@@ -49,6 +49,9 @@ class GroovyGrailsDtoGenerator extends DefaultGrailsDtoGenerator {
 
             fields << field
         }
+        if (makeValidateable) {
+            imports << "grails.validation.Validateable"
+        }
 
         processProperty.call(dc.identifier)
         dc.properties.findAll({ it.name != dc.identifier.name }).each(processProperty)
@@ -67,6 +70,9 @@ class GroovyGrailsDtoGenerator extends DefaultGrailsDtoGenerator {
         }
 
         // Next, the class declaration.
+        if (makeValidateable) {
+            writer.write "@Validateable${eol}"
+        }
         writer.write "class ${dc.shortName}DTO implements grails.plugins.dto.DTO {${eol}"
 
         // A serialUID, since DTOs are serialisable.
@@ -74,8 +80,10 @@ class GroovyGrailsDtoGenerator extends DefaultGrailsDtoGenerator {
 
         // The private fields.
         fields.each { field ->
-            def fieldType = field.typeString == 'Object' ? 'def' : field.typeString
-            writer.write "${indent}${fieldType} ${field.name};${eol}"
+            if (!field.name.toLowerCase().equals('pk')) {
+                def fieldType = field.typeString == 'Object' ? 'def' : field.typeString
+                writer.write "${indent}${fieldType} ${field.name};${eol}"
+            }
         }
 
         // Class terminator.

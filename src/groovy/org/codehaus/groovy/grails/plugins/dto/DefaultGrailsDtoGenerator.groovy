@@ -17,6 +17,7 @@ class DefaultGrailsDtoGenerator {
     protected processed
 
     Map packageTransforms = [:]
+    boolean makeValidateable = false
     
     /**
      * Creates a generator.
